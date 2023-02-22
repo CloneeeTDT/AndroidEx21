@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleSignIn() {
-        if (username.text.toString() === "admin" && password.text.toString() === "admin1234") {
+        if (username.text.toString() == "admin" && password.text.toString() == "admin1234") {
             return makeToast("Đăng nhập thành công")
         }
         if (username.text.isEmpty() || password.text.isEmpty()) {
