@@ -8,56 +8,85 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="123dp"
-        android:layout_height="103dp"
+        android:layout_width="115dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_lock_reset_24"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Icon" />
+        app:srcCompat="@drawable/baseline_lock_reset_24" />
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign in to continue"
         android:layout_marginTop="20dp"
+        android:text="Sign in to continue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ED7070"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
-
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
-        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/usernameInput"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/baseline_person_24"
             android:ems="10"
+            android:hint="Username"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:paddingLeft="10dp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/passwordInput"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/baseline_lock_24"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/keepSignInBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:layout_marginTop="5dp"
+            android:text="Keep me Sign in"
+            android:textColor="#4CAF50"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resetBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="RESET PASSWORD"
+            android:textColor="#9C27B0"
+            android:textStyle="bold" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/signinBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
